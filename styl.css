@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --hk_fontsize:calc(0.3125rem + ((1vw - 3.6px) * 0.4965));
+    --hk_fontsize__smallest: min(max(12px,1.2rem),12px);
+    --hk_fontsize__small: min(max(12px,1.5rem),15px);
+    --hk_fontsize__normal: min(max(15px,1.7rem),17px);
+    --hk_fontsize__medium: min(max(17px,2rem),20px);
+    --hk_fontsize__title: min(max(24px,3rem),30px);
+    --hk_fontsize__big: min(max(24px,4rem),40px);
+    --hk_fontsize__bigger: min(max(30px,5rem),50px);
+    --hk_fontsize__biggest: min(max(40px,8rem),80px);
+    --hk_fontweight__light: 300;
+    --hk_fontweight__regular: 400;
+    --hk_fontweight__medium: 500;
+    --hk_fontweight__semibold: 600;
+    --hk_fontweight__bold: 700;
+    --hk_fontweight__extrabold: 800;
+    --global-width:min(calc(320px + ((1vw - 3.6px) * 88)),1200px);
+    --hk_brightgrey:#EFEFEF;
+    --hk_white:#FFF;
+    --hk_secondfont: 'Baloo Tamma 2', cursive;
+}
+
+.hk_background{
+    background-color:rgb(71, 79, 89, 0.5)
+}
+body{
+    display:flex;
+    font-size: 10px;
+    margin:0 auto;
+    padding:0;
+    font-family:Rajdhani;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color:var(--hk_white) ;
+}
+header {
+    display:grid;
+}
+#myVideo{
+    height:5rem;
+    width:100%;
+    object-fit:cover;
+}
+.hk_menu1{
+    height:5rem;
+    float:left;
+    background-size: cover;
+    
+}
+
+.hk_menu1 > img{
+    width:5rem;
+    height:auto;
+    opacity: 80%;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    position:absolute;
+}
+.hk_menu1 > img:hover{
+    opacity: 50%;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+.hk_menu2_container{
+overflow: hidden;
+}
+
+.hk_menu2_container > .hk_menu2 > ul >  li >  a {
+    margin:0;
+    width:25%;
+    float:left;
+    list-style-type: none;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: var(--hk_fontweight__bold);
+    font-size: var(--hk_fontsize__small);
+    background-color:rgb(240, 128, 128, );
+    text-decoration:none;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    color:white;
+
+}
+
+.hk_menu2 > ul >  li > a:hover{
+    background-color: rgb(49, 55, 62, 0.6);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    text-shadow:
+    -1px -1px 0 #d73b2d,
+    1px -1px 0 #d73b2d,
+    -1px 1px 0 #d73b2d,
+    1px 1px 0 #d73b2d;
+}
+ul{
+    padding:0;
+    margin:0;
+    width: var(--global-width);
+    margin:0 auto;
+    list-style:none;
+
+}
+
+footer {
+    font-size:var(--hk_fontsize__smallest);
+    line-height: 2rem;
+    background-color: #474F59;
+    text-align: center;
+    margin-top:auto;
+    position: relative;
+    bottom:0;
+}
+
+footer > h3{
+    line-height:2rem;
+    margin: 0 auto;
+    height:2rem;
+}
+
+#main {
+    width:100%;
+    background-image: url(photo/main_theme.png);
+    background-size:cover;
+}
+.grid_child_container1{
+    grid-area: header;
+    border-radius:0 25px 25px 0;
+}
+.grid_child_container2{
+    grid-area:main;
+    border-radius:25px 0 0 25px;
+}
+.grid_child_container3{
+    grid-area:footer;
+    border-radius:0 25px 25px 0;
+
+}
+
+.grid_child_container1, .grid_child_container2, .grid_child_container3{
+    -webkit-box-shadow: -6px 8px 30px 10px rgba(66, 68, 90, 1);
+    -moz-box-shadow: -6px 8px 30px 10px rgba(66, 68, 90, 1);
+    box-shadow: -6px 8px 30px 10px rgba(66, 68, 90, 1);
+    background-color: rgb(239, 239, 239, 0.7);
+    outline: 10px outset rgb(239, 239, 239, 0.5);  
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out; 
+    }
+
+.grid_child_container1:hover, .grid_child_container2:hover, .grid_child_container3:hover{
+    background-color: rgb(239, 239, 239, 0.9);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+div lord-icon{
+    float:right;
+}
+.grid_child_h1{
+    font-size: var(--hk_fontsize__big);
+    font-weight: var(--hk_fontweight__extrabold);
+    font-family: var(--hk_secondfont);
+    margin:0;
+    margin-top:1rem;
+    margin-left:2rem;
+    float:left;
+}
+
+.grid_child_p{
+    font-size: var(--hk_fontsize__medium);
+    float:left;
+    margin-left:2rem;
+}
+
+.button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: inline-flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    clear:both;
+    float:left;
+    margin-left:2rem;
+}
+    
+.button-64:active,
+.button-64:hover {
+    outline: 0;
+}
+    
+.button-64 span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+    
+.button-64:hover span {
+    background: none;
+}
+
+
+.main_content_container{
+    display: grid;
+    grid-template-columns: 1fr 10rem 1fr;
+    grid-template-rows: 1fr 3rem 1fr 3rem 1fr;
+    grid-template-areas:
+     "header . ."
+     ". . ."
+     ". . main"
+     ". . ."
+     "footer . .";
+     margin-top: 3rem;
+     margin-bottom:3rem;
+}
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:250px;
+    width:var(--global-width);
+    margin:0 auto;
+
+
+}
+.information_container{
+    width: 100% !important;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (min-width: 768px) {
+    .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+    }
+}
